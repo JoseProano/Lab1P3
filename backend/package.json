@@ -4,12 +4,34 @@
   "description": "Vulnerable REST API for parking zones and spaces",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --coverage --coverageReporters=text --coverageReporters=lcov",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1",
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "collectCoverageFrom": [
+      "config/**/*.js",
+      "routes/**/*.js",
+      "!server.js",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/test/**"
+    ]
   },
   "author": "",
   "license": "ISC"

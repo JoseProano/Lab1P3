@@ -4,6 +4,10 @@ const zonesRoutes = require('./routes/zones');
 const spacesRoutes = require('./routes/spaces');
 
 const app = express();
+
+// Ocultar información de versión de Express (Security Best Practice)
+app.disable('x-powered-by');
+
 const port = 3000;
 
 app.use(bodyParser.json());

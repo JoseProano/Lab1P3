@@ -22,8 +22,8 @@ Ext.application({
     views: ['ZoneGrid', 'SpaceGrid'],
     
     launch: function() {
-        var zonesStore = Ext.create('ParkingApp.store.Zones');
-        var spacesStore = Ext.create('ParkingApp.store.Spaces');
+        const zonesStore = Ext.create('ParkingApp.store.Zones');
+        const spacesStore = Ext.create('ParkingApp.store.Spaces');
         
         Ext.create('Ext.container.Viewport', {
             layout: 'fit',

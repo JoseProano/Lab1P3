@@ -13,12 +13,20 @@ Este proyecto ha sido analizado y corregido usando **SonarQube** para identifica
 - 🟡 Reliability Rating: C
 - 🟢 Maintainability Rating: A
 
+![Dashboard SonarQube - Análisis Inicial](images/sonarqube-antes.png)
+*Captura del dashboard de SonarQube mostrando los issues y security hotspots antes de las correcciones*
+
+---
+
 **DESPUÉS:**
 - 🟢 Issues: 0 abiertos
 - 🟢 Security Hotspots: 3 resueltos (100%)
 - 🟢 Security Rating: A
 - 🟢 Reliability Rating: A
 - 🟢 Maintainability Rating: A
+
+![Dashboard SonarQube - Después de Correcciones](images/sonarqube-despues.png)
+*Captura del dashboard de SonarQube después de aplicar todas las correcciones - Quality Gate PASSED*
 
 ### 🔧 Correcciones Aplicadas (6 total)
 
@@ -101,9 +109,6 @@ El archivo `sonar-project.properties` ya contiene toda la configuración necesar
 
 ## 📚 Documentación del Laboratorio
 
-- **[INFORME_CORRECCIONES.md](INFORME_CORRECCIONES.md)** - Informe completo con todas las correcciones detalladas
-- **[INSTRUCCIONES_INSTALACION.md](INSTRUCCIONES_INSTALACION.md)** - Guía de instalación paso a paso
-- **[CHECKLIST_ENTREGA.md](CHECKLIST_ENTREGA.md)** - Lista de verificación para la entrega
 - **[sonar-project.properties](sonar-project.properties)** - Configuración de SonarQube
 
 ---
@@ -135,11 +140,14 @@ El archivo `sonar-project.properties` ya contiene toda la configuración necesar
 
 ## 📊 Quality Gates Configuradas
 
-1. **Seguridad:** Rating A (sin vulnerabilidades críticas)
-2. **Mantenibilidad:** Deuda técnica < 30min/100 líneas
-3. **Código duplicado:** Máximo 5%
+1. **Seguridad:** Rating A (sin vulnerabilidades críticas), todos los Security Hotspots revisados
+2. **Mantenibilidad:** Deuda técnica < 5%
+3. **Código duplicado:** Máximo 15%
 4. **Confiabilidad:** Rating A
-5. **Buenas prácticas:** Sin anti-patrones
+5. **Coverage:** Mayor al 70%
+
+![Quality Gates Configuradas](images/quality-gates.png)
+*Configuración de Quality Gates en SonarQube con las reglas principales*
 
 ---
 
